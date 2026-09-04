@@ -1,0 +1,5 @@
+# Cyclic deployment config
+# Docs: https://docs.cyclic.sh/basic/scheduled-execution
+name: topwar-activation
+runtime: node
+langVersion: 20
