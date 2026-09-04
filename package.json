@@ -1,0 +1,15 @@
+{
+  "name": "topwar-activation",
+  "version": "1.0.0",
+  "description": "口袋奇兵激活码在线校验端点（Render 部署）",
+  "main": "render_app.js",
+  "scripts": {
+    "start": "node render_app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
