@@ -4868,7 +4868,7 @@ app.post('/verify', (req, res) => {
 
 // [MANIFEST_ENDPOINT]
 app.get('/script/manifest', (req, res) => {
-  res.json(__MANIFEST);
+  res.json(_MANIFEST);
 });
 
 // [DOWNLOAD_ENDPOINT]
@@ -4892,16 +4892,16 @@ app.post('/__admin/set-manifest', (req, res) => {
     return res.status(401).json({ ok: false, err: 'Unauthorized: invalid PIN' });
   }
   const { version, buildDate, changelog, fileSize } = req.body;
-  if (version) __MANIFEST.version = String(version);
-  if (buildDate) __MANIFEST.buildDate = String(buildDate);
-  if (changelog) __MANIFEST.changelog = Array.isArray(changelog) ? changelog : [changelog];
-  if (fileSize) __MANIFEST.fileSize = Number(fileSize);
-  console.log('[admin] manifest updated:', JSON.stringify(__MANIFEST));
-  res.json({ ok: true, manifest: __MANIFEST });
+  if (version) _MANIFEST.version = String(version);
+  if (buildDate) _MANIFEST.buildDate = String(buildDate);
+  if (changelog) _MANIFEST.changelog = Array.isArray(changelog) ? changelog : [changelog];
+  if (fileSize) _MANIFEST.fileSize = Number(fileSize);
+  console.log('[admin] manifest updated:', JSON.stringify(_MANIFEST));
+  res.json({ ok: true, manifest: _MANIFEST });
 });
 
 app.get('/__admin/manifest', (req, res) => {
-  res.json({ manifest: __MANIFEST });
+  res.json({ manifest: _MANIFEST });
 });
 
 app.post('/__admin/reload-script', (req, res) => {
