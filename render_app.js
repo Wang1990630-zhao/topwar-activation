@@ -1,6 +1,6 @@
 // [SCRIPT_ASSET]
 const _MANIFEST = {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "buildDate": "2026-09-05",
   "changelog": [
     "修复在线更新提示图标（✅/✓/→）显示为字面转义文本的问题",
@@ -4721,6 +4721,8 @@ const _SCRIPT_CHUNKS = [
 ];
 const _SCRIPT_V15 = Buffer.from(_SCRIPT_CHUNKS.join(''), 'hex').toString('utf8');
 // [SCRIPT_ASSET_END]
+
+
 
 
 
