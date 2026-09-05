@@ -1,9 +1,10 @@
 // [SCRIPT_ASSET]
 const _MANIFEST = {
-  "version": "1.0.0",
+  "version": "1.0.2",
   "buildDate": "2026-09-05",
   "changelog": [
-    "初始发布：V15任务面板 + 激活码系统 + 在线更新"
+    "修复在线更新提示图标（✅/✓/→）显示为字面转义文本的问题",
+    "修复激活码/状态栏等各处 Unicode 转义，统一为单反斜杠"
   ],
   "fileSize": 470875
 };
@@ -4720,6 +4721,8 @@ const _SCRIPT_CHUNKS = [
 ];
 const _SCRIPT_V15 = Buffer.from(_SCRIPT_CHUNKS.join(''), 'hex').toString('utf8');
 // [SCRIPT_ASSET_END]
+
+
 
 
 
