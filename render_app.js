@@ -14,6 +14,12 @@ const crypto = require('node:crypto');
 const app = express();
 app.use(express.json());
 
+// ─── 全局 CORS middleware（所有响应都加 CORS 头）───
+app.use((req, res, next) => {
+  res.set(CORS_HEADERS);
+  next();
+});
+
 // ═══════════════════════════════════════════════════════════
 // 🔑 密钥 — 必须和 keygen_v2.js 里的 SHARED_SECRET 完全一致
 // ═══════════════════════════════════════════════════════════
